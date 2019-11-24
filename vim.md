@@ -76,4 +76,58 @@ Pour passer à la prochaine occurrence du mot, plus bas dans le fichier (s'il ap
 
 
 
+### :s : rechercher et remplacer du texte
+
+Pour rechercher et remplacer du texte, c'est un peu plus compliqué. Il y a en effet plusieurs façons d'effectuer le remplacement.
+
+La plus simple façon d’effectuer une recherche consiste à taper:s/ancien/nouveaupour rechercher « ancien » et le remplacer par « nouveau ». Le problème… c’est que cela ne remplacera que la première occurrence d'« ancien » par « nouveau ».
+
+* :s/ancien/nouveau : remplace la première occurrence de la ligne où se trouve le curseur ;
+* :s/ancien/nouveau/g : remplace toutes les occurrences de la ligne où se trouve le curseur ;
+* :#,#s/ancien/nouveau/g : remplace toutes les occurrences dans les lignes n° # à # du fichier ;
+* :%s/ancien/nouveau/g : remplace toutes les occurrences dans tout le fichier. C'est peut-être ce que vous utiliserez le plus fréquemment.
+
+### :r : fusion de fichiers
+Avec:r, vous pouvez insérer un fichier à la position du curseur. Vous devez indiquer le nom du fichier à insérer, par exemple ::r autrefichier.
+
+L'autocomplétion avecTabfonctionne là aussi, donc pas besoin d'écrire le nom du fichier en entier !
+
+Le découpage d'écran (split)
+
+## Le découpage d'écran (split)
+
+Vim possède une fonctionnalité pratique : il permet de découper l'écran et d'ouvrir plusieurs fichiers.
+
+:sp : découper l'écran horizontalement
+
+:vsp : découper l'écran verticalement
+
+
+### Les principaux raccourcis en écran splitté
+
+Chaque morceau de l'écran (correspondant à un fichier) est appelé viewport.
+Voici une liste de raccourcis pratiques que vous pouvez utiliser lorsque l'écran est splitté (scindé).
+
+* Ctrl + wpuisCtrl + w : navigue de viewport en viewport. Répétez l'opération plusieurs fois pour accéder au viewport désiré.
+
+* Ctrl + wpuisj : déplace le curseur pour aller au viewport juste en dessous. La même chose fonctionne avec les touchesh,ketlque l'on utilise traditionnellement pour se déplacer dans Vim.
+
+* Ctrl + wpuis+ : agrandit le viewport actuel.
+
+* Ctrl + wpuis- : réduit le viewport actuel.
+
+* Ctrl + wpuis= : égalise à nouveau la taille des viewports.
+
+* Ctrl + wpuisr : échange la position des viewports. Fonctionne aussi avec « R » majuscule pour échanger en sens inverse.
+
+* Ctrl + wpuisq : ferme le viewport actuel.
+
+
+### :! : lancer une commande externe
+
+Il est possible d'écrire des commandes traditionnelles du shell directement dans Vim. Pour cela, commencez par taper:!suivi du nom de la commande.
+
+Essayez par exemple de taper:!ls. Vous afficherez alors le contenu du dossier dans lequel vous vous trouvez !
+Cette fonctionnalité est bien pratique pour effectuer quelques actions sans avoir à quitter Vim.
+
 
