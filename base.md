@@ -6,13 +6,69 @@ Pour beaucoup shell c'est linux, mais en vrai c'est plus l'architechture unix qu
 la philosophie de unix c'est que tout les choses que l'on peut faire avec une interface graphique, nous pouvons aussi le faire avec des commande.
 beaucoup d'appilication mac et linux ne sont que le front de sertaint scripts shell.
 
-il existe plusieurs normes, shell n'est pas la seul il y a le bash, sh, tcsh, ash, sh, csh, mais la différence n'est pas trés grande,
+il existe plusieurs normes shell,bash n'est pas la seul il y a le sh, tcsh, ash, sh, csh, mais la différence n'est pas trés grande,
 les script sont casiment similaire.
+
+le premier des shell c'est sh il est installer sur tout les evironement unix mais il est aussi le moins riche.
+est la normes aujourd'hui c'est bash. mais bash n'est pas disponible sur tout les navigateur notament sur sertaint os propriétaire, comme AIX, SOLARIS
+
+## petit tips
+
+`Ctrl + R` se souvenir quelles étaient les dernières commandes tapées (
+`Tab` autocompléter une commande ou un nom de fichier
+`Ctrl + Z` gérer les processus (envoi en arrière-plan, mise en pause
+
+ Le .bashrc est le fichier de configuration du bash que Linux vous fait utiliser par défaut. Chaque personne peut avoir son .bashrc pour personnaliser son invite de commandes, ses alias, etc.
+
+ ----
+## Création du fichier
+Commençons par créer un nouveau fichier pour notre script. Le plus simple est d'ouvrir Vim en lui donnant le nom du nouveau fichier à créer :
+    $ vim essai.sh
+
+J'ai donné ici l'extension .sh à mon fichier. On le fait souvent par convention pour indiquer que c'est un script shell, mais sachez que ce n'est pas une obligation. Certains scripts shell n'ont d'ailleurs pas d'extension du tout.
+J'aurais donc pu appeler mon script essai tout court.
+
+## indiquer le nom du shell
+
+    !/bin/bash
+
+## Les commentaires
+
+    ## Affichage de la liste des fichiers
+## Donner les droits d'exécution au script
+
+    $ ls -l
+    total 4
+    -rw-r--r-- 1 mateo21 mateo21 17 2009-03-13 14:33 essai.sh
+
+Pour connaitre les droit d'écriture d'un fichier il faut regarder -rw-r--r--
+le r signifi droit de l'ecture 
+le w ecritur 
+le x signifi exécution du fichier
+
+    $ chmod +x essai.sh
+
+et maintenant on donne tout les droit 
+
+    $ ls -l
+    total 4
+    -rwxr-xr-x 1 mateo21 mateo21 17 2009-03-13 14:33 essai.sh
+
+## Exécution de débogage
+
+    $ bash -x essai.sh
+
+
+## Créer sa propre commande
+https://openclassrooms.com/fr/courses/43538-reprenez-le-controle-a-laide-de-linux/42867-introduction-aux-scripts-shell#/id/r-2284152
 
 ## Commandes pour débuter
 
-`cd`  change le répertoire courant.
+Plus tard, vous ferez probablement de gros scripts et risquerez de rencontrer des bugs. Il faut donc dès à présent que vous sachiez comment déboguer un script.
+Il faut l'exécuter comme ceci :
 
+`cd`  change le répertoire courant.
+---
 `ls`  affiche le contenu d'un répertoire
 
 *	cd .. va dans le répertoire parent du répertoire courant
