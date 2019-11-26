@@ -100,11 +100,11 @@ avec les let, je te fait un petit exemple.
 
 * le modulo (renvoie le reste de la division entière) : %.
 
-    let "a = 5 * 3" # $a = 15
-    let "a = 4 ** 2" # $a = 16 (4 au carré)
-    let "a = 8 / 2" # $a = 4
-    let "a = 10 / 3" # $a = 3
-    let "a = 10 % 3" # $a = 1
+      let "a = 5 * 3" # $a = 15
+      let "a = 4 ** 2" # $a = 16 (4 au carré)
+      let "a = 8 / 2" # $a = 4
+      let "a = 10 / 3" # $a = 3
+      let "a = 10 % 3" # $a = 1
 
 pour les division le résulta renvoyé est toujours un entier.
 
